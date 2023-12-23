@@ -1,0 +1,14 @@
+{
+    "store.custom#i-want-look-page": {
+        "blocks": [
+            "responsive-layout.desktop#i-want-look-page",
+            "responsive-layout.mobile#i-want-look-page"
+        ]
+    },
+    "responsive-layout.desktop#i-want-look-page": {
+
+    },
+    "responsive-layout.mobile#i-want-look-page": {
+        
+    }
+}

@@ -1,0 +1,8 @@
+{
+    "store.custom#i-want-look": {
+        "path": "/quero-look/:id"
+    },
+    "store.custom#create-look-page": {
+        "path": "/criar-look"
+    }
+}
