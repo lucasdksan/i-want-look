@@ -1,5 +1,5 @@
 {
-    "store.custom#i-want-look": {
+    "store.custom#i-want-look-page": {
         "path": "/quero-look/:id"
     },
     "store.custom#create-look-page": {

@@ -1,0 +1,11 @@
+{
+    "flex-layout.row#search-section": {
+        "title": "Seção para pesquisa",
+        "props": {
+            "blockClass": "search-section"
+        },
+        "children": [
+            "n1-search-section"
+        ]
+    }
+}

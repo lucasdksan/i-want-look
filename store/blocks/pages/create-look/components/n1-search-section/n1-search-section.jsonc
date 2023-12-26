@@ -1,0 +1,35 @@
+{
+    "n1-search-section": {
+        "title": "Seção de Pesquisa",
+        "props": {
+            "VtexFlexRowBody": "flex-layout.row#search-section-block",
+            "VtexFlexRowListResult": "flex-layout.row#list-result",
+            "VtexFlexRowInputContainer": "flex-layout.row#input-container",
+            "VtexFlexRowBottomContent": "flex-layout.row#bottom-content"
+        }
+    },
+    "flex-layout.row#search-section-block": {
+        "title": "Bloco Principal de Pesquisa",
+        "props": {
+            "blockClass": "search-section-block"
+        }
+    },
+    "flex-layout.row#list-result": {
+        "title": "Lista dos Resultados",
+        "props": {
+            "blockClass": "list-result"
+        }
+    },
+    "flex-layout.row#input-container": {
+        "title": "Bloco do Input",
+        "props": {
+            "blockClass": "input-container"
+        }
+    },
+    "flex-layout.row#bottom-content": {
+        "title": "Conteudo Inferior",
+        "props": {
+            "blockClass": "bottom-content"
+        }
+    }
+}
