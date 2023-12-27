@@ -1,0 +1,18 @@
+{
+    "flex-layout.row#banner-section-want-look": {
+        "title": "Seção do Banner",
+        "props": {
+            "blockClass": "banner-section"
+        },
+        "children": [
+            "image#banner-hero-want-look"
+        ]
+    },
+    "image#banner-hero-want-look":{
+        "title": "Banner Principal",
+        "props": {
+            "alt": "Banner Hero",
+            "blockClass": "banner-hero"
+        }
+    }
+}

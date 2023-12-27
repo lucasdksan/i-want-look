@@ -1,0 +1,13 @@
+{
+    "flex-layout.row#i-want-look-body": {
+        "title": "Corpo da Página Quero Look",
+        "props": {
+            "blockClass": [
+                "i-want-look-body"
+            ]
+        },
+        "children": [
+            "n1-look-section"
+        ]
+    }
+}

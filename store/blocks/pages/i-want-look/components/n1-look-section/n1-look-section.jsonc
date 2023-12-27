@@ -1,0 +1,14 @@
+{
+    "n1-look-section": {
+        "title": "Seção Principal",
+        "props": {
+            "VtexFlexRowBody": "flex-layout.row#i-want-look-block"
+        }
+    },
+    "flex-layout.row#i-want-look-block": {
+        "title": "Bloco Principal de Pesquisa",
+        "props": {
+            "blockClass": "i-want-look-block"
+        }
+    }
+}

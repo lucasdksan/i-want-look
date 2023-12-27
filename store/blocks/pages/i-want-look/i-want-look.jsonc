@@ -6,9 +6,15 @@
         ]
     },
     "responsive-layout.desktop#i-want-look-page": {
-
+        "children": [
+            "flex-layout.row#banner-section-want-look",
+            "flex-layout.row#i-want-look-body"
+        ]
     },
     "responsive-layout.mobile#i-want-look-page": {
-        
+        "children": [
+            "flex-layout.row#banner-section-want-look",
+            "flex-layout.row#i-want-look-body"
+        ]
     }
 }

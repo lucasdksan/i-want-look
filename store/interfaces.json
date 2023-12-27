@@ -1,5 +1,8 @@
 {
     "n1-search-section": {
         "component": "SearchSection"
+    },
+    "n1-look-section": {
+        "component": "LookSection"
     }
 }
