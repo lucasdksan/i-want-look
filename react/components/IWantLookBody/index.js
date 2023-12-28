@@ -1,26 +1,27 @@
 import { useEffect, useState } from "react";
 import { decoder_product_list } from "../../libs/decoder_product_list";
-import { search_product } from "../../libs/search_product";
+import { handle_get_product } from "./libs/handle_get_product";
+import DescriptionBlock from "../DescriptionBlock";
+import ProductLook from "../ProductLook";
 
-export default function IWantLookBody({ iWantLookData }){
-    const product_list = decoder_product_list(iWantLookData.product_list);
+export default function IWantLookBody({ iWantLookData, VtexFlexRowDescription, VtexFlexRowProducts }) {
+    const [data, setData] = useState(decoder_product_list(iWantLookData.product_list));
     const [productList, setProductList] = useState([]);
 
-    useEffect(()=>{
-        console.log("Product_list: ", product_list);
+    useEffect(() => {
+        if(data.length !== 0) data.forEach(productId => handle_get_product(productId, setProductList));
+    }, []);
 
-        // if(productList.length === 0){
-        //     product_list.forEach(element => {
-        //         search_product(element, setProductList);
-        //     });
-        // }
+    if(productList.length === 0) return(<div>Loading...</div>);
 
-        // console.log("productList: ", productList);
-    },[]);
-
-    return(
-        <div>
-
-        </div>
+    return (
+        <>
+            <VtexFlexRowDescription>
+                <DescriptionBlock description={iWantLookData.description} productList={productList} />
+            </VtexFlexRowDescription>
+            <VtexFlexRowProducts>
+                { productList.map((product, index)=> <ProductLook product={product} key={index} />) }
+            </VtexFlexRowProducts>
+        </>
     );
 }

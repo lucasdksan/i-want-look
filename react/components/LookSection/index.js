@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, memo } from "react";
 import { get_look } from "../../libs/get_look";
 import IWantLookBody from "../IWantLookBody";
 
-export default function LookSection({ VtexFlexRowBody }) {
+export default function LookSection({ VtexFlexRowBody, VtexFlexRowDescription, VtexFlexRowProducts }) {
     const [loading, setLoading] = useState(true);
     const [iWantLookData, setIWantLookData] = useState();
     const [successGetLook, setSuccessGetLook] = useState(false);
@@ -29,7 +29,11 @@ export default function LookSection({ VtexFlexRowBody }) {
 
     return (
         <VtexFlexRowBody>
-            <IWantLookBody iWantLookData={iWantLookData} />
+            <IWantLookBody 
+                iWantLookData={iWantLookData} 
+                VtexFlexRowDescription={VtexFlexRowDescription} 
+                VtexFlexRowProducts={VtexFlexRowProducts} 
+            />
         </VtexFlexRowBody>
     );
 }

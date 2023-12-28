@@ -68,6 +68,14 @@ const validataion_data = (productListSelected, text)=>{
             }
         };
     }
+
+    return {
+        success: true,
+        dataError_validation: {
+            errorText: false,
+            productListSelected: false
+        }
+    }
 }
 
 export const handle_submit = async (data) => {

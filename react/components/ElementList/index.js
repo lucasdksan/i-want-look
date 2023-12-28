@@ -3,13 +3,10 @@ import { class_generator } from "../../libs/class_generator";
 export default function ElementList({ product, productSearched, setProductListSelected, setProductSearched }) {
     const handleCheckboxChange = (event) => {
         const isChecked = event.target.checked;
-        const selectedProduct = { productReference: product.productReference };
+        const selectedProduct = { productId: product.productId };
 
-        if (isChecked) {
-            setProductListSelected((prevList) => [...prevList, selectedProduct]);
-        } else {
-            setProductListSelected((prevList) => prevList.filter((item) => item.sku !== selectedProduct.sku));
-        }
+        if (isChecked) setProductListSelected((prevList) => [...prevList, selectedProduct]);
+        else setProductListSelected((prevList) => prevList.filter((item) => item.productId !== selectedProduct.productId));
     };
 
     const handleRemove = (id) => {

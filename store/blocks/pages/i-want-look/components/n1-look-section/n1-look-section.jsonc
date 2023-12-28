@@ -2,13 +2,33 @@
     "n1-look-section": {
         "title": "Seção Principal",
         "props": {
-            "VtexFlexRowBody": "flex-layout.row#i-want-look-block"
+            "VtexFlexRowBody": "flex-layout.row#i-want-look-block",
+            "VtexFlexRowDescription": "flex-layout.row#i-want-look-description-area",
+            "VtexFlexRowProducts": "flex-layout.row#i-want-look-product-list"
         }
     },
     "flex-layout.row#i-want-look-block": {
         "title": "Bloco Principal de Pesquisa",
         "props": {
-            "blockClass": "i-want-look-block"
+            "blockClass": [
+                "i-want-look-block"
+            ]
+        }
+    },
+    "flex-layout.row#i-want-look-description-area": {
+        "title": "Área da Descrição do Look",
+        "props": {
+            "blockClass": [
+                "i-want-look-description-area"
+            ]
+        }
+    },
+    "flex-layout.row#i-want-look-product-list": {
+        "title": "Lista dos Produtos",
+        "props": {
+            "blockClass": [
+                "i-want-look-product-list"
+            ]
         }
     }
 }
