@@ -1,33 +1,26 @@
 {
     "n1-look-section": {
-        "title": "Seção Principal",
+        "title": "Seção do Loook Book",
         "props": {
-            "VtexFlexRowBody": "flex-layout.row#i-want-look-block",
-            "VtexFlexRowDescription": "flex-layout.row#i-want-look-description-area",
-            "VtexFlexRowProducts": "flex-layout.row#i-want-look-product-list"
-        }
-    },
-    "flex-layout.row#i-want-look-block": {
-        "title": "Bloco Principal de Pesquisa",
-        "props": {
-            "blockClass": [
-                "i-want-look-block"
+            "VtexFlexRowBody": "flex-layout.row#look-section-body",
+            "VtexListContext": "list-context.product-list#shelf-want-look",
+            "list_look": [
+                {
+                    "active": true,
+                    "collection": "161",
+                    "description": "Para os amantes da natureza, um dia ao ar livre é uma opção encantadora. Opte por um conjunto casual e confortável, como um par de calças leves e uma blusa solta. Um chapéu e óculos de sol adicionam um toque descontraído e proteção contra o sol. Não se esqueça de uma manta para um picnic romântico sob as estrelas.",
+                    "desktop_image_url": "https://agencian1.vtexassets.com/assets/vtex.file-manager-graphql/images/5c903d56-91ac-4363-8954-20ba8253f467___5c6ab1c8af91b74e3415b1dab3e8e0b8.jpg",
+                    "mobile_image_url": "https://agencian1.vtexassets.com/assets/vtex.file-manager-graphql/images/f60c802c-576f-4102-8643-4b5279ad5abd___a929b2c0e0d37a53a3e5f64f1449ec2a.jpg",
+                    "query": "romeu-julieta"
+                }
             ]
         }
     },
-    "flex-layout.row#i-want-look-description-area": {
-        "title": "Área da Descrição do Look",
+    "flex-layout.row#look-section-body": {
+        "title": "Container da Seção",
         "props": {
             "blockClass": [
-                "i-want-look-description-area"
-            ]
-        }
-    },
-    "flex-layout.row#i-want-look-product-list": {
-        "title": "Lista dos Produtos",
-        "props": {
-            "blockClass": [
-                "i-want-look-product-list"
+                "look-section-body"
             ]
         }
     }

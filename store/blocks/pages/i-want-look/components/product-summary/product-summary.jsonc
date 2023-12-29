@@ -1,0 +1,14 @@
+{
+    "product-summary.shelf#want-look": {
+        "title": "Produto do Quero Look",
+        "children": [
+            "product-summary-image",
+            "product-summary-name",
+            "product-rating-inline",
+            "product-summary-sku-selector",
+            "product-summary-space",
+            "product-summary-price",
+            "product-summary-buy-button"
+        ]
+    }
+}
