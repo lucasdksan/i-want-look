@@ -1,18 +1,6 @@
 {
     "store.custom#i-want-look-page": {
         "blocks": [
-            "responsive-layout.desktop#i-want-look-page",
-            "responsive-layout.mobile#i-want-look-page"
-        ]
-    },
-    "responsive-layout.desktop#i-want-look-page": {
-        "children": [
-            "flex-layout.row#banner-section-want-look",
-            "flex-layout.row#i-want-look-body"
-        ]
-    },
-    "responsive-layout.mobile#i-want-look-page": {
-        "children": [
             "flex-layout.row#banner-section-want-look",
             "flex-layout.row#i-want-look-body"
         ]
