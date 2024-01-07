@@ -1,0 +1,27 @@
+.flexRow--banner-section :global(.vtex-store-components-3-x-container){
+    padding: 0px !important;
+    max-width: 100%;
+}
+
+.flexRow--search-section {
+    margin-top: 20px;
+}
+
+.flexRow--search-section :global(.vtex-store-components-3-x-container){
+    max-width: 800px !important;
+    padding: 0px !important;
+}
+
+.flexRowContent--search-section-block {
+    flex-direction: column !important;
+    align-items: center !important;
+    justify-content: center !important;
+}
+
+.flexRowContent--search-section-block :global(.vtex-flex-layout-0-x-stretchChildrenWidth){
+    width: 100% !important;
+}
+
+.flexRowContent--bottom-content {
+    flex-direction: column !important;
+}

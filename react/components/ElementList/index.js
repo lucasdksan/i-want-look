@@ -1,5 +1,7 @@
 import { class_generator } from "../../libs/class_generator";
 
+import delete_icon from "../../assets/delete.svg";
+
 export default function ElementList({ product, productSearched, setProductListSelected, setProductSearched }) {
     const handleCheckboxChange = (event) => {
         const isChecked = event.target.checked;
@@ -27,7 +29,9 @@ export default function ElementList({ product, productSearched, setProductListSe
                     <a className={class_generator("vtex-search-section", "product-element--link")} href={product.link} target="_blank">{product.productName}</a>
                 </span>
             </label>
-            <button onClick={() => handleRemove(product.productId)} className={class_generator("vtex-search-section", "product-element--remove")}></button>
+            <button onClick={() => handleRemove(product.productId)} className={class_generator("vtex-search-section", "product-element--remove")}>
+                <img src={delete_icon} alt="Delete Icon" />
+            </button>
         </li>
     );
 }

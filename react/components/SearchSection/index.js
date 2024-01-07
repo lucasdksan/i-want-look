@@ -7,6 +7,8 @@ import { search_product } from "../../libs/search_product";
 import { handle_submit } from "../../libs/handle_submit";
 
 export default function SearchSection({ VtexFlexRowBody, VtexFlexRowListResult, VtexFlexRowInputContainer, VtexFlexRowBottomContent }) {
+    const [selectedFileDesktop, setSelectedFileDesktop] = useState(null);
+    const [selectedFileMobile, setSelectedFileMobile] = useState(null);
     const [inputSearch, setInputSearch] = useState("");
     const [productSearched, setProductSearched] = useState([]);
     const [productListSelected, setProductListSelected] = useState([]);
@@ -14,14 +16,13 @@ export default function SearchSection({ VtexFlexRowBody, VtexFlexRowListResult, 
     const [successString, setSuccessString] = useState("");
     const [dataError, setDataError] = useState();
 
-    const function_submit = async ()=>{
-        const { dataError_validation, success } = await handle_submit({ productListSelected, text });
-
+    const function_submit = async () => {
+        const { dataError_validation, success } = await handle_submit({ productListSelected, text, selectedFileDesktop, selectedFileMobile });
         setSuccessString(success ? "Enviado" : "Preencha o formulário");
         setDataError(dataError_validation);
     }
 
-    const handleSubmit = (event)=>{
+    const handleSubmit = (event) => {
         event.preventDefault();
         function_submit();
     }
@@ -43,12 +44,20 @@ export default function SearchSection({ VtexFlexRowBody, VtexFlexRowListResult, 
             </VtexFlexRowInputContainer>
             <form onSubmit={(e) => handleSubmit(e)} className={class_generator("vtex-search-section", "search-form")}>
                 <VtexFlexRowListResult>
-                    <ul style={{ border: dataError?.productListSelected ? "1px solid red": "" }} className={class_generator("vtex-search-section", "search-list")}>
+                    <ul className={`${class_generator("vtex-search-section", "search-list")} ${dataError?.productListSelected && class_generator("vtex-search-section", "search-list--error")}`}>
                         {productSearched.map((product, index) => <ElementList productSearched={productSearched} setProductSearched={setProductSearched} product={product} key={index} setProductListSelected={setProductListSelected} />)}
                     </ul>
                 </VtexFlexRowListResult>
                 <VtexFlexRowBottomContent>
-                    <textarea style={{ border: dataError?.errorText ? "1px solid red": "" }} value={text} onChange={(e) => setText(e.target.value)} className={class_generator("vtex-search-section", "search-textarea")}></textarea>
+                    <div className={`${class_generator("vtex-search-section", "input-file--desktop")} ${dataError?.file_image_d && class_generator("vtex-search-section", "input-file--desktop--error")}`}>
+                        <span className={class_generator("vtex-search-section", "input-file--title")}>Banner Desktop</span>
+                        <input className={class_generator("vtex-search-section", "input-file")} type="file" accept="image/*" onChange={(e) => setSelectedFileDesktop(e.target.files[0])} />
+                    </div>
+                    <div className={`${class_generator("vtex-search-section", "input-file--mobile")} ${dataError?.file_image_m && class_generator("vtex-search-section", "input-file--mobile--error")}`}>
+                        <span className={class_generator("vtex-search-section", "input-file--title")}>Banner Mobile</span>
+                        <input className={class_generator("vtex-search-section", "input-file")} type="file" accept="image/*" onChange={(e) => setSelectedFileMobile(e.target.files[0])} />
+                    </div>
+                    <textarea value={text} onChange={(e) => setText(e.target.value)} className={`${class_generator("vtex-search-section", "search-textarea")} ${dataError?.errorText && class_generator("vtex-search-section", "search-textarea--error")}`}></textarea>
                     <button type="submit" className={class_generator("vtex-search-section", "search-save-look")}>Salvar Look</button>
                 </VtexFlexRowBottomContent>
                 {successString === "" ? <></> : <p className={class_generator("vtex-search-section", "search-stats")}>{successString}</p>}
